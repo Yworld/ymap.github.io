@@ -1,2 +1,2 @@
 # ymap.github.io
-Yuworld map
+Yuworld map. Sources in gh-pages.
