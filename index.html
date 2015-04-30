@@ -1,7 +1,211 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with !!!GitHub Pages.</p>
-</body>
+  <head>
+    <title>Карта ЮМира</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script>
+/* мапа */
+function initialize() {
+  var mapOptions = {
+    zoom: 3,
+    center: new google.maps.LatLng(54.9382099, 43.3239641),
+    styles: [{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"on"},{"gamma":3.17}]}]
+  };
+  
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  map.data.loadGeoJson('https://gist.githubusercontent.com/dpme/46c843f7852cc6bf9d24/raw/df7b48899600cb3bc288579290f3a88c2277534d/borders.json');
+  
+  var featureStyle = {
+    strokeWeight: 0.7
+  }
+                     map.data.setStyle(featureStyle);
+
+    /* государства */
+  var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(57.0917959, -4.3038488),
+  map: map,
+    title: "Провинция Юфония (Кор. Ютения)",
+  icon: "https://i.imgur.com/oNgOeUD.png",
+    opacity: 0.5
+});
+  
+  var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(52.9396141, -1.6474431),
+  map: map,
+    title: "Провинция Великоютения (Кор. Ютения)",
+  icon: "https://i.imgur.com/ko8N17r.png",
+    opacity: 0.5
+});
+  
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(52.160791, 5.641919),
+  map: map,
+    title: "Провинция Нидерланды (Кор. Ютения)",
+  icon: "https://i.imgur.com/Mhku99u.png",
+          opacity: 0.5
+});
+  
+  var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(31.518851, -99.121032),
+  map: map,
+    title: "США",
+  icon: "https://i.imgur.com/WRdqLXA.png",
+    opacity: 0.5
+});
+
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(55.751463, 37.615655),
+  map: map,
+    title: "Российская Федеративная Республика",
+  icon: "https://i.imgur.com/IRYgNim.png",
+          opacity: 0.5
+});
+  
+     var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(55.241037, 103.043628),
+  map: map,
+    title: "Российская Федеративная Республика",
+  icon: "https://i.imgur.com/IRYgNim.png",
+          opacity: 0.5
+});
+  
+     var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(49.484744, 30.616808),
+  map: map,
+    title: "провинция Малороссия (РФР)",
+  icon: "https://i.imgur.com/IRYgNim.png",
+          opacity: 0.5
+});
+  
+     var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(57.871990, 25.861354),
+  map: map,
+    title: "Балтийская Республика",
+  icon: "https://i.imgur.com/IRYgNim.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(53.180439, 28.010538),
+  map: map,
+    title: "Республика Черепашия",
+  icon: "https://i.imgur.com/T7m6emS.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(43.773697, 20.751086),
+  map: map,
+    title: "Республика Черепашия",
+  icon: "https://i.imgur.com/T7m6emS.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(-26.488333, 122.156817),
+  map: map,
+    title: "Республика Черепахия",
+  icon: "https://i.imgur.com/Es3dxxQ.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(25.614025, 44.516610),
+  map: map,
+    title: "Республика Черепахия",
+  icon: "https://i.imgur.com/Es3dxxQ.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(-1.680153, 113.383826),
+  map: map,
+    title: "Республика Утения",
+  icon: "https://i.imgur.com/35OcLiI.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(62.938535, 67.213891),
+  map: map,
+    title: "Республика Утения",
+  icon: "https://i.imgur.com/35OcLiI.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(42.571919, 25.167590),
+  map: map,
+    title: "Республика Утения",
+  icon: "https://i.imgur.com/35OcLiI.png",
+          opacity: 0.5
+});  
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(-36.353746, -65.689935),
+  map: map,
+    title: "провинция Западная Ютения (Кор. Ютения)",
+  icon: "https://i.imgur.com/oNgOeUD.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(45.945192, 14.656421),
+  map: map,
+    title: "Республика Медведия",
+  icon: "https://i.imgur.com/VpqH14h.png",
+          opacity: 0.5
+});
+  
+   var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(40.026724, -3.880854),
+  map: map,
+    title: "Республика Черепахия",
+  icon: "https://i.imgur.com/Es3dxxQ.png",
+          opacity: 0.5
+});
+
+    var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(52.275631, 19.353312),
+  map: map,
+    title: "Республика Черепахия",
+  icon: "https://i.imgur.com/Es3dxxQ.png",
+          opacity: 0.5
+});
+
+    var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(48.702065, 19.423067),
+  map: map,
+    title: "Республика Черепашия",
+  icon: "https://i.imgur.com/T7m6emS.png",
+          opacity: 0.5
+});
+  
+}
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '&signed_in=true&callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+    </script>
+    <style>
+            html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+     <!-- <script src="https://maps.utenia.ru/require.js" data-main="rq"></script> -->
 </html>
