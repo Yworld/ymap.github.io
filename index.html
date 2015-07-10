@@ -25,38 +25,49 @@ function initialize() {
                      map.data.setStyle(featureStyle);
 
     /* государства  */
+    /* North American */
   var marker = new google.maps.Marker({
   position: new google.maps.LatLng(36.415374, -101.704836),
   map: map,
-    title: "КША",
-  icon: "http://i.imgur.com/1fvuUaY.png",
+    title: "США",
+  icon: "https://i.imgur.com/1fvuUaY.png",
     opacity: 0.5
 });
   var marker = new google.maps.Marker({
   position: new google.maps.LatLng(64.969110, -151.216427),
   map: map,
-    title: "КША AK",
-  icon: "http://i.imgur.com/1fvuUaY.png",
+    title: "США AK",
+  icon: "https://i.imgur.com/1fvuUaY.png",
     opacity: 0.5
 });
   
-  var marker = new google.maps.Marker({
-  position: new google.maps.LatLng(45.017239, -103.473864),
-  map: map,
-    title: "США",
-  icon: "http://i.imgur.com/7HSSfJR.png",
-    opacity: 0.5
-});
-  
+  /* Other */
   
    var marker = new google.maps.Marker({
   position: new google.maps.LatLng(23.792878, 45.324952),
   map: map,
     title: "ФРЧ",
-  icon: "http://i.imgur.com/6Gp0iuo.png",
+  icon: "https://i.imgur.com/6Gp0iuo.png",
           opacity: 0.5
 });
+
+/* Europenian */
   
+  var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(47.590799, 14.147939),
+  map: map,
+    title: "Утенийская Федерация",
+  icon: "https://i.imgur.com/9Ow6bJC.png",
+          opacity: 0.5
+});
+
+ var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(47.590799, 14.147939),
+  map: map,
+    title: "ПRТЫЙ РЕЙХ: $ТРАНА КАЙФА",
+  icon: "https://i.imgur.com/8oahDTE.png",
+          opacity: 0.5
+});
   
 }
 function loadScript() {
