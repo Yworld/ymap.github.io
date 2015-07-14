@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>Карта ЮМира: Сети</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<meta property="og:title" content="Карта ЮМира: Сети">
+	<meta property="og:description" content="Карта ЮМира. Только актуальные границы! Обновляется КАООН.">
+	<meta property="og:image" content="http://i.imgur.com/N86I981.png">
+    <script>
+/* мапа */
+function initialize() {
+  var mapOptions = {
+    zoom: 3,
+    center: new google.maps.LatLng(54.9382099, 43.3239641),
+    styles: [{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"on"},{"gamma":3.17}]}]
+  };
+  
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  //map.data.loadGeoJson('http://карта.юмир.рф/borders.json');
+  
+  var featureStyle = {
+    strokeWeight: 0.7
+  }
+                     map.data.setStyle(featureStyle);
+
+   var georssLayer = new google.maps.KmlLayer({
+    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/Network.kmz'
+  });
+  georssLayer.setMap(map);
+  
+  
+}
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '&signed_in=true&callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+    </script>
+    <style>
+            html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, sans-serif;
+      }
+      .block1 {
+        position: absolute;
+        top: 65px;
+        right: 11px;
+        background-color: white;
+        padding: 5px;
+        opacity: 0.5;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+      .block1:hover {
+        opacity: 1;
+      }
+      .addMenu {
+        list-style-type: none;
+        font-size: 13px;
+        padding: 0;
+        margin: 0;
+      }
+      .addMenu > li > i {
+        padding-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+    <div class="block1">Другие карты: <br><ul><li><a href="/sat.html" style="text-decoration: none; color: black;">Карта спутников</a></li></ul><ul class="addMenu"><li><i class="fa fa-flag"></i><a data-remodal-target="errorMap">Нашли ошибку?</a></li><li><i class="fa fa-rocket"></i><a data-remodal-target="API">API</a></li></div>
+      
+    <!-- Remodal -->
+    <div class="remodal" data-remodal-id="errorMap">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Нашли ошибку?</h1>
+  <p>
+    Да, ошибки иногда действительно случаются, и даже на карте. Для того что-бы сообщить нам о ошибке, создайте, пожалуйста, Issue на нашем репозитории Github. <br> <i>Внимание:</i> Неточность в границах (отличие от реальных границ) не может быть ошибкой
+  </p>
+  <br>
+  <button data-remodal-action="cancel" class="remodal-cancel">Ясно</button>
+  <a href="https://github.com/Yworld/ymap.github.io/issues"><button class="remodal-confirm">Создать Issue</button></a>
+</div>
+
+<div class="remodal" data-remodal-id="API">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>API</h1>
+  <p>
+    Совсем недавно у нас появилось публичное API, которое вы можете использовать в связке с Google Maps API, Leaflet, и другими сервисами.
+  </p>
+  <br>
+  <button data-remodal-action="cancel" class="remodal-cancel">Ясно</button>
+  <a href="https://github.com/Yworld/ymap.github.io#our-api-russian"><button class="remodal-confirm">Посмотреть</button></a>
+</div>
+
+<!-- Remodal End -->
+
+  </body>
+     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+     <script src="js/remodal.min.js"></script>
+     <link rel="stylesheet" href="css/remodal.css">
+     <link rel="stylesheet" href="css/remodal-default-theme.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</html>
