@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 	<meta property="og:title" content="Карта ЮМира">
 	<meta property="og:description" content="Карта ЮМира. Только актуальные границы! Обновляется КАООН.">
-	<meta property="og:image" content="http://i.imgur.com/N86I981.png">
+	<meta property="og:image" content="https://i.imgur.com/N86I981.png">
     <script>
 /* мапа */
 function initialize() {
@@ -19,7 +19,7 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  map.data.loadGeoJson('http://карта.юмир.рф/borders.json');
+  map.data.loadGeoJson('//карта.юмир.рф/borders.json');
   
   var featureStyle = {
     strokeWeight: 0.7
@@ -181,7 +181,7 @@ window.onload = loadScript;
 <!-- Remodal End -->
 
   </body>
-     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
      <script src="js/remodal.min.js"></script>
      <link rel="stylesheet" href="css/remodal.css">
      <link rel="stylesheet" href="css/remodal-default-theme.css">
