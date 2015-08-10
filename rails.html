@@ -19,7 +19,7 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  //map.data.loadGeoJson('http://карта.юмир.рф/borders.json');
+  map.data.loadGeoJson('//карта.юмир.рф/borders.json');
   
   var featureStyle = {
     strokeWeight: 0.7
@@ -27,8 +27,13 @@ function initialize() {
                      map.data.setStyle(featureStyle);
 
    var georssLayer = new google.maps.KmlLayer({
-    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/Network.kmz'
+    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/SOR.kmz'
   });
+  
+  var layer2 = new google.maps.KmlLayer({
+    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/ULR.kmz'
+  });
+  
   georssLayer.setMap(map);
   
   
