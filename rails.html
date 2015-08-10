@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Карта ЮМира: Сети</title>
+    <title>Карта ЮМира: Ж/Д</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-	<meta property="og:title" content="Карта ЮМира: Сети">
-	<meta property="og:description" content="Карта ЮМира. Только актуальные границы! Обновляется КАООН.">
-	<meta property="og:image" content="https://i.imgur.com/N86I981.png">
+	<meta property="og:title" content="Карта ЮМира: Железная дорога">
+	<meta property="og:description" content="Железнодорожная карта ЮМира. Все в одном месте! Мгновенное обновление.">
+	<meta property="og:image" content="http://i61.tinypic.com/ifx5dc.png">
     <script>
 /* мапа */
 function initialize() {
@@ -26,15 +26,19 @@ function initialize() {
   }
                      map.data.setStyle(featureStyle);
 
-   var georssLayer = new google.maps.KmlLayer({
-    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/SOR.kmz'
+   var SOR = new google.maps.KmlLayer({
+    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/SOR.kmz',
+	preserveViewport: true
   });
   
-  var layer2 = new google.maps.KmlLayer({
-    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/ULR.kmz'
+  var ULR = new google.maps.KmlLayer({
+    url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/ULR.kmz',
+	preserveViewport: true
   });
   
-  georssLayer.setMap(map);
+  ULR.setMap(map); // ULR
+  SOR.setMap(map); // SOR
+  
   
   
 }
@@ -81,7 +85,7 @@ window.onload = loadScript;
   </head>
   <body>
     <div id="map-canvas"></div>
-    <div class="block1">Другие карты: <br><ul><li><a href="/sat.html" style="text-decoration: none; color: black;">Карта спутников</a></li><li><a href="/networks.html" style="text-decoration: none; color: black;">Карта сетей</a></li></ul><ul class="addMenu"><li><i class="fa fa-flag"></i><a data-remodal-target="errorMap">Нашли ошибку?</a></li><li><i class="fa fa-rocket"></i><a data-remodal-target="API">API</a></li></div>
+    <div class="block1">Другие карты: <br><ul><li><a href="/sat.html" style="text-decoration: none; color: black;">Карта спутников</a></li><li><a href="/networks.html" style="text-decoration: none; color: black;">Карта сетей</a></li><li><a href="/rails.html" style="text-decoration: none; color: black;">Карта Ж/Д</a></li></ul><ul class="addMenu"><li><i class="fa fa-flag"></i><a data-remodal-target="errorMap">Нашли ошибку?</a></li><li><i class="fa fa-rocket"></i><a data-remodal-target="API">API</a></li> <p>Отображаются карты SOR и УЛЖД</p></div>
       
     <!-- Remodal -->
     <div class="remodal" data-remodal-id="errorMap">
