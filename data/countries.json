@@ -45,11 +45,11 @@
     "region": "Europe"
   },
   {
-    "title": "США (Закреплено - Королевство Рамзахия)",
+    "title": "США (ФЕСШ) (Закреплено - Королевство Рамзахия)",
     "lat": 52.893595,
     "lng": 18.708591,
     "icon": "https://i.imgur.com/MoDY6eP.png",
-    "more": "Закреплено Агентством ООН по опеке",
+    "more": "Закреплено Агентством ООН по опеке. Штат Рамзахия.",
     "region": "Europe"
   },
   {
@@ -71,6 +71,29 @@
     "lat": 38.345943,
     "lng": -2.309741,
     "icon": "https://i.imgur.com/4rHsmkK.png",
+    "region": "Europe"
+  },
+  {
+    "title": "Арстотцка (НСДР)",
+    "lat": 35.043855,
+    "lng": 33.224688,
+    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "more": "Кипр. Получено через конкурс в группе.",
+    "region": "Europe"
+  },
+  {
+    "title": "США (ФЕСШ)",
+    "lat": 46.796064,
+    "lng": 7.949916,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Штат Швейцария",
+    "region": "Europe"
+  },
+  {
+    "title": "Республика Горм",
+    "lat": 48.697984,
+    "lng": 19.405333,
+    "icon": "https://i.imgur.com/ArliQTG.png",
     "region": "Europe"
   }
   ]
