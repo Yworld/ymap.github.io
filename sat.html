@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Карта ЮМира</title>
+    <title>Карта ЮМира: Спутники</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <script src="https://utenia.ru/js/yumir.menu.js"></script>
+    <script src="/js/head.load.min.js"></script>
     <script>
+    head.load("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js", function() {
+        head.load("https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initialize", "/js/module/switcher.js");
+        window.smallterritoriesloaded = false; window.poistatus = false;
+});
 /* мапа */
 function initialize() {
   var mapOptions = {
@@ -24,6 +28,79 @@ function initialize() {
   }
                      map.data.setStyle(featureStyle);
 
+
+// Load countries
+        $.getJSON("/data/countries.json", function(json1) {
+          for (var i = 0, length = json1.length; i < length; i++) {
+  var data = json1[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title,
+    icon: data.icon,
+    opacity: 0.5
+  });
+}
+      });
+    console.log('[FINE] Countries loaded from /data/countries.json!');
+    
+// Load smallterritories
+google.maps.event.addListener(map, 'zoom_changed', function() {
+var zoomLevel =  map.getZoom();
+console.log('Wow! '+zoomLevel)
+if (zoomLevel>=7) {
+    if(window.smallterritoriesloaded == true) {
+        // Уже было загружено
+    }
+    else {
+     $.getJSON("/data/smallterritories.json", function(json2) {
+          for (var i = 0, length = json2.length; i < length; i++) {
+  var data = json2[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title,
+    icon: data.icon,
+    opacity: 0.5
+  });
+}
+ console.log('[FINE] Small territories loaded from /data/smallterritories.json!');
+ window.smallterritoriesloaded = true;
+});
+}
+}
+
+if (zoomLevel>=14) {
+    if(window.poistatus == true) {
+        // Уже было загружено
+    }
+    else {
+     $.getJSON("/data/poi.json", function(json3) {
+          for (var i = 0, length = json3.length; i < length; i++) {
+  var data = json3[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title
+  });
+}
+ console.log('[FINE] POI loaded from /data/poi.json!');
+ window.poistatus = true;
+});
+}
+}
+
+});
+
+
    var georssLayer = new google.maps.KmlLayer({
     url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/space.kmz'
   });
@@ -31,15 +108,6 @@ function initialize() {
   
   
 }
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initialize';
-  document.body.appendChild(script);
-}
-
-window.onload = loadScript;
     </script>
     <style>
             html, body, #map-canvas {

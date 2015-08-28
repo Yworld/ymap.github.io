@@ -1,0 +1,76 @@
+[{
+    "title": "США",
+    "lat": 36.415374,
+    "lng": -101.704836,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "region": "Northen America"
+  },
+  {
+    "title": "США",
+    "lat": 64.969110,
+    "lng": -151.216427,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Аляска",
+    "region": "Northen America"
+  },
+  {
+    "title": "Арстотцка (НСДР)",
+    "lat": -23.247206,
+    "lng": -58.378478,
+    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "more": "Прошлая Делфиния",
+    "region": "South America"
+  },
+  {
+    "title": "Арстотцка (НСДР) (Закреплено - Республика Черепашия)",
+    "lat": 23.247206,
+    "lng": 45.324952,
+    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "more": "Закреплено Агентством ООН по опеке",
+    "region": "Eurasia"
+  },
+  {
+    "title": "Утенийская Федерация (СРиМ)",
+    "lat": 47.590799,
+    "lng": 14.147939,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "region": "Europe"
+  },
+  {
+    "title": "Утенийская Федерация (СРиМ) (Закреплено - Франция)",
+    "lat": 46.602019,
+    "lng": 2.479762,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "more": "Закреплено Агентством ООН по опеке",
+    "region": "Europe"
+  },
+  {
+    "title": "США (Закреплено - Королевство Рамзахия)",
+    "lat": 52.893595,
+    "lng": 18.708591,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Закреплено Агентством ООН по опеке",
+    "region": "Europe"
+  },
+  {
+    "title": "Арстотцка (НСДР)",
+    "lat": 64.989114,
+    "lng": -18.582594,
+    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "region": "Northen Europe"
+  },
+  {
+    "title": "Япония",
+    "lat": 36.696326,
+    "lng": 139.476704,
+    "icon": "https://i.imgur.com/mWta54m.png",
+    "region": "Asia"
+  },
+  {
+    "title": "Арстотцка (НДСР)",
+    "lat": 38.345943,
+    "lng": -2.309741,
+    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "region": "Europe"
+  }
+  ]

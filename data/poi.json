@@ -1,0 +1,16 @@
+[{
+    "title": "Центральный офис Visa",
+    "lat": 38.962108,
+    "lng": -77.087179,
+    "company": "Visa PLC",
+    "country": "USA",
+    "registar": "MAUN"
+  },
+  {
+    "title": "Завод Skoda в Ле-Бурже",
+    "lat": 48.973785,
+    "lng": 2.463553,
+    "company": "Skoda SAS",
+    "country": "FRA",
+    "registar": "MAUN"
+  }]

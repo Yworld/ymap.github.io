@@ -7,7 +7,12 @@
 	<meta property="og:title" content="Карта ЮМира: Сети">
 	<meta property="og:description" content="Карта ЮМира. Только актуальные границы! Обновляется КАООН.">
 	<meta property="og:image" content="https://i.imgur.com/N86I981.png">
+	<script src="/js/head.load.min.js"></script>
     <script>
+        head.load("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js", function() {
+        head.load("https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initialize", "/js/module/switcher.js");
+        window.smallterritoriesloaded = false; window.poistatus = false;
+});
 /* мапа */
 function initialize() {
   var mapOptions = {
@@ -26,6 +31,78 @@ function initialize() {
   }
                      map.data.setStyle(featureStyle);
 
+                  
+    // Load countries
+        $.getJSON("/data/countries.json", function(json1) {
+          for (var i = 0, length = json1.length; i < length; i++) {
+  var data = json1[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title,
+    icon: data.icon,
+    opacity: 0.5
+  });
+}
+      });
+    console.log('[FINE] Countries loaded from /data/countries.json!');
+    
+// Load smallterritories
+google.maps.event.addListener(map, 'zoom_changed', function() {
+var zoomLevel =  map.getZoom();
+console.log('Wow! '+zoomLevel)
+if (zoomLevel>=7) {
+    if(window.smallterritoriesloaded == true) {
+        // Уже было загружено
+    }
+    else {
+     $.getJSON("/data/smallterritories.json", function(json2) {
+          for (var i = 0, length = json2.length; i < length; i++) {
+  var data = json2[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title,
+    icon: data.icon,
+    opacity: 0.5
+  });
+}
+ console.log('[FINE] Small territories loaded from /data/smallterritories.json!');
+ window.smallterritoriesloaded = true;
+});
+}
+}
+
+if (zoomLevel>=14) {
+    if(window.poistatus == true) {
+        // Уже было загружено
+    }
+    else {
+     $.getJSON("/data/poi.json", function(json3) {
+          for (var i = 0, length = json3.length; i < length; i++) {
+  var data = json3[i],
+      latLng = new google.maps.LatLng(data.lat, data.lng); 
+  // Creating a marker and putting it on the map
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: data.title
+  });
+}
+ console.log('[FINE] POI loaded from /data/poi.json!');
+ window.poistatus = true;
+});
+}
+}
+
+});
+
    var georssLayer = new google.maps.KmlLayer({
     url: 'http://xn--80aa2azak.xn--h1ahn7c.xn--p1ai/kmz/Network.kmz'
   });
@@ -33,16 +110,7 @@ function initialize() {
   
   
 }
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initialize';
-  document.body.appendChild(script);
-}
-
-window.onload = loadScript;
-    </script>
+</script>
     <style>
             html, body, #map-canvas {
         height: 100%;
@@ -76,37 +144,6 @@ window.onload = loadScript;
   </head>
   <body>
     <div id="map-canvas"></div>
-    <div class="block1">Другие карты: <br><ul><li><a href="/sat.html" style="text-decoration: none; color: black;">Карта спутников</a></li><li><a href="/networks.html" style="text-decoration: none; color: black;">Карта сетей</a></li><li><a href="/rails.html" style="text-decoration: none; color: black;">Карта Ж/Д</a></li></ul><ul class="addMenu"><li><i class="fa fa-flag"></i><a data-remodal-target="errorMap">Нашли ошибку?</a></li><li><i class="fa fa-rocket"></i><a data-remodal-target="API">API</a></li></div>
-      
-    <!-- Remodal -->
-    <div class="remodal" data-remodal-id="errorMap">
-  <button data-remodal-action="close" class="remodal-close"></button>
-  <h1>Нашли ошибку?</h1>
-  <p>
-    Да, ошибки иногда действительно случаются, и даже на карте. Для того что-бы сообщить нам о ошибке, создайте, пожалуйста, Issue на нашем репозитории Github. <br> <i>Внимание:</i> Неточность в границах (отличие от реальных границ) не может быть ошибкой
-  </p>
-  <br>
-  <button data-remodal-action="cancel" class="remodal-cancel">Ясно</button>
-  <a href="https://github.com/Yworld/ymap.github.io/issues"><button class="remodal-confirm">Создать Issue</button></a>
-</div>
-
-<div class="remodal" data-remodal-id="API">
-  <button data-remodal-action="close" class="remodal-close"></button>
-  <h1>API</h1>
-  <p>
-    Совсем недавно у нас появилось публичное API, которое вы можете использовать в связке с Google Maps API, Leaflet, и другими сервисами.
-  </p>
-  <br>
-  <button data-remodal-action="cancel" class="remodal-cancel">Ясно</button>
-  <a href="https://github.com/Yworld/ymap.github.io#our-api-russian"><button class="remodal-confirm">Посмотреть</button></a>
-</div>
-
-<!-- Remodal End -->
-
+   
   </body>
-     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-     <script src="js/remodal.min.js"></script>
-     <link rel="stylesheet" href="css/remodal.css">
-     <link rel="stylesheet" href="css/remodal-default-theme.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </html>
