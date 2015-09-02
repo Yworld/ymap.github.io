@@ -14,30 +14,30 @@
     "region": "Northen America"
   },
   {
-    "title": "Арстотцка (НСДР)",
+    "title": "США",
     "lat": -23.247206,
     "lng": -58.378478,
-    "icon": "https://i.imgur.com/4rHsmkK.png",
-    "more": "Прошлая Делфиния",
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Прошлая Делфиния. ФЕСШ. Штат PY.",
     "region": "South America"
   },
   {
-    "title": "Арстотцка (НСДР) (Закреплено - Республика Черепашия)",
+    "title": "Утенийская Федерация (Закреплено - Республика Черепашия)",
     "lat": 23.247206,
     "lng": 45.324952,
-    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
     "more": "Закреплено Агентством ООН по опеке",
     "region": "Eurasia"
   },
   {
-    "title": "Утенийская Федерация (СРиМ)",
+    "title": "Утенийская Федерация",
     "lat": 47.590799,
     "lng": 14.147939,
     "icon": "https://i.imgur.com/9Ow6bJC.png",
     "region": "Europe"
   },
   {
-    "title": "Утенийская Федерация (СРиМ) (Закреплено - Франция)",
+    "title": "Утенийская Федерация (Закреплено - Франция)",
     "lat": 46.602019,
     "lng": 2.479762,
     "icon": "https://i.imgur.com/9Ow6bJC.png",
@@ -49,14 +49,15 @@
     "lat": 52.893595,
     "lng": 18.708591,
     "icon": "https://i.imgur.com/MoDY6eP.png",
-    "more": "Закреплено Агентством ООН по опеке. Штат Рамзахия.",
+    "more": "Закреплено Агентством ООН по опеке. Штат RA.",
     "region": "Europe"
   },
   {
-    "title": "Арстотцка (НСДР)",
+    "title": "США (ФЕСШ)",
     "lat": 64.989114,
     "lng": -18.582594,
-    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Штат AI",
     "region": "Northen Europe"
   },
   {
@@ -67,18 +68,18 @@
     "region": "Asia"
   },
   {
-    "title": "Арстотцка (НДСР)",
+    "title": "США (ФЕСШ)",
     "lat": 38.345943,
     "lng": -2.309741,
-    "icon": "https://i.imgur.com/4rHsmkK.png",
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Штат AE",
     "region": "Europe"
   },
   {
-    "title": "Арстотцка (НСДР)",
+    "title": "Украинская Народная Республика",
     "lat": 35.043855,
     "lng": 33.224688,
-    "icon": "https://i.imgur.com/4rHsmkK.png",
-    "more": "Кипр. Получено через конкурс в группе.",
+    "icon": "https://i.imgur.com/MoDY6eP.png",
     "region": "Europe"
   },
   {
