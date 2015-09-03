@@ -79,7 +79,15 @@
     "title": "Украинская Народная Республика",
     "lat": 35.043855,
     "lng": 33.224688,
-    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "icon": "https://i.imgur.com/gkeFOEi.png",
+    "region": "Europe"
+  },
+  {
+    "title": "Украинская Народная Республика",
+    "lat": 48.898510,
+    "lng": 21.536854,
+    "icon": "https://i.imgur.com/gkeFOEi.png",
+    "more": "Словакия",
     "region": "Europe"
   },
   {
@@ -87,14 +95,15 @@
     "lat": 46.796064,
     "lng": 7.949916,
     "icon": "https://i.imgur.com/MoDY6eP.png",
-    "more": "Штат Швейцария",
+    "more": "Штат CH",
     "region": "Europe"
   },
   {
-    "title": "Королевство Северная Италия",
+    "title": "США (ФЕСШ)",
     "lat": 48.697984,
     "lng": 19.405333,
-    "icon": "https://i.imgur.com/ArliQTG.png",
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Штат SL",
     "region": "Europe"
   }
   ]
