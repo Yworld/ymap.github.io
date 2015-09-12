@@ -1,8 +1,8 @@
 [{
-    "title": "Центральный офис Visa",
+    "title": "Orange Holding",
     "lat": 38.962108,
     "lng": -77.087179,
-    "company": "Visa PLC",
+    "company": "Orange Holding PLC",
     "country": "USA",
     "registar": "MAUN"
   },
@@ -15,7 +15,7 @@
     "registar": "MAUN"
   },
   {
-    "title": "Офис Nokia Europe",
+    "title": "Nokia Europe",
     "lat": 48.201746,
     "lng": 16.400445,
     "company": "Nokia Europe GmbH",
@@ -27,6 +27,30 @@
     "lat": 46.637345,
     "lng": 14.372159,
     "company": "Nokia Europe GmbH",
+    "country": "UTN",
+    "registar": "MAUN"
+  },
+  {
+    "title": "UPS",
+    "lat": 48.126447,
+    "lng": 16.553619,
+    "company": "UPS Utenia GmbH",
+    "country": "UTN",
+    "registar": "MAUN"
+  },
+  {
+    "title": "American Airlines",
+    "lat": 48.201874,
+    "lng": 16.369095,
+    "company": "UPS Utenia GmbH",
+    "country": "UTN",
+    "registar": "MAUN"
+  },
+  {
+    "title": "X Laboratories",
+    "lat": 48.182490,
+    "lng": 16.326316,
+    "company": "X Laboratories GmbH",
     "country": "UTN",
     "registar": "MAUN"
   }]
