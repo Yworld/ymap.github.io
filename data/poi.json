@@ -13,4 +13,20 @@
     "company": "Skoda SAS",
     "country": "FRA",
     "registar": "MAUN"
+  },
+  {
+    "title": "Офис Nokia Europe",
+    "lat": 48.201746,
+    "lng": 16.400445,
+    "company": "Nokia Europe GmbH",
+    "country": "UTN",
+    "registar": "MAUN"
+  },
+  {
+    "title": "Завод Nokia Europe",
+    "lat": 46.637345,
+    "lng": 14.372159,
+    "company": "Nokia Europe GmbH",
+    "country": "UTN",
+    "registar": "MAUN"
   }]
