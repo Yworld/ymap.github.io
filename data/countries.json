@@ -53,11 +53,10 @@
     "region": "Europe"
   },
   {
-    "title": "США (ФЕСШ)",
+    "title": "Республика Либерленд",
     "lat": 64.989114,
     "lng": -18.582594,
-    "icon": "https://i.imgur.com/MoDY6eP.png",
-    "more": "Штат AI",
+    "icon": "https://i.imgur.com/2zWHdkP.png",
     "region": "Northen Europe"
   },
   {
@@ -76,17 +75,17 @@
     "region": "Europe"
   },
   {
-    "title": "Украинская Народная Республика",
+    "title": "Королевство Силенд",
     "lat": 35.043855,
     "lng": 33.224688,
-    "icon": "https://i.imgur.com/gkeFOEi.png",
+    "icon": "https://i.imgur.com/skYGQiY.png",
     "region": "Europe"
   },
   {
-    "title": "Украинская Народная Республика",
+    "title": "Королевство Силенд",
     "lat": 48.898510,
     "lng": 21.536854,
-    "icon": "https://i.imgur.com/gkeFOEi.png",
+    "icon": "https://i.imgur.com/skYGQiY.png",
     "more": "Словакия",
     "region": "Europe"
   },
