@@ -53,10 +53,10 @@
     "region": "Europe"
   },
   {
-    "title": "Республика Либерленд",
+    "title": "Утенийская Федерация",
     "lat": 64.989114,
     "lng": -18.582594,
-    "icon": "https://i.imgur.com/2zWHdkP.png",
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
     "region": "Northen Europe"
   },
   {
@@ -104,5 +104,20 @@
     "icon": "https://i.imgur.com/MoDY6eP.png",
     "more": "Штат SL",
     "region": "Europe"
+  },
+  {
+    "title": "США (ФЕСШ)",
+    "lat": 33.957072,
+    "lng": 49.731758,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Штат IR",
+    "region": "Africa"
+  },
+  {
+    "title": "Утенийская Федерация",
+    "lat": 33.957072,
+    "lng": 49.731758,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "region": "Africa"
   }
   ]
