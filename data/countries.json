@@ -150,5 +150,13 @@
     "icon": "https://i.imgur.com/9Ow6bJC.png",
     "more": "GB",
     "region": "Europe"
+  },
+  {
+    "title": "Утенийская Федерация",
+    "lat": 39.689774,
+    "lng": -8.621641,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "more": "Португалия",
+    "region": "Europe"
   }
   ]
