@@ -14,11 +14,10 @@
     "region": "Northen America"
   },
   {
-    "title": "США",
+    "title": "Республика Либерленд",
     "lat": -23.247206,
     "lng": -58.378478,
-    "icon": "https://i.imgur.com/MoDY6eP.png",
-    "more": "Прошлая Делфиния. ФЕСШ. Штат PY.",
+    "icon": "https://i.imgur.com/jqG2AVN.png",
     "region": "South America"
   },
   {
@@ -119,5 +118,37 @@
     "lng": 57.674663,
     "icon": "https://i.imgur.com/9Ow6bJC.png",
     "region": "Africa"
+  },
+  {
+    "title": "США",
+    "lat": 51.071866,
+    "lng": 10.392213,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Германия",
+    "region": "Europe"
+  },
+  {
+    "title": "Королевство Силенд",
+    "lat": 52.162275,
+    "lng": 5.645980,
+    "icon": "https://i.imgur.com/skYGQiY.png",
+    "more": "Нидерланды",
+    "region": "Europe"
+  },
+  {
+    "title": "Республика Либерленд",
+    "lat": 50.498638,
+    "lng": 4.669237,
+    "icon": "https://i.imgur.com/jqG2AVN.png",
+    "more": "Бельгия",
+    "region": "Europe"
+  },
+  {
+    "title": "Утенийская Федерация",
+    "lat": 54.998900,
+    "lng": -2.681000,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "more": "GB",
+    "region": "Europe"
   }
   ]
