@@ -182,5 +182,13 @@
     "icon": "https://i.imgur.com/skYGQiY.png",
     "more": "Чехия",
     "region": "Europe"
+  },
+  {
+    "title": "Япония",
+    "lat": 7.605744,
+    "lng": 80.700449,
+    "icon": "https://i.imgur.com/mWta54m.png",
+    "more": "Шри-Ланка",
+    "region": "Asia"
   }
   ]
