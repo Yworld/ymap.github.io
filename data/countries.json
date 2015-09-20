@@ -21,10 +21,10 @@
     "region": "South America"
   },
   {
-    "title": "Утенийская Федерация (Закреплено - Республика Черепашия)",
+    "title": "Республика Либерленд (Закреплено - Республика Черепашия)",
     "lat": 23.247206,
     "lng": 45.324952,
-    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "icon": "https://i.imgur.com/jqG2AVN.png",
     "more": "Закреплено Агентством ООН по опеке",
     "region": "Eurasia"
   },
@@ -120,7 +120,7 @@
     "region": "Africa"
   },
   {
-    "title": "США",
+    "title": "США (ФЕСШ)",
     "lat": 51.071866,
     "lng": 10.392213,
     "icon": "https://i.imgur.com/MoDY6eP.png",
@@ -128,10 +128,10 @@
     "region": "Europe"
   },
   {
-    "title": "Королевство Силенд",
+    "title": "Республика Либерленд",
     "lat": 52.162275,
     "lng": 5.645980,
-    "icon": "https://i.imgur.com/skYGQiY.png",
+    "icon": "https://i.imgur.com/jqG2AVN.png",
     "more": "Нидерланды",
     "region": "Europe"
   },
@@ -157,6 +157,22 @@
     "lng": -8.621641,
     "icon": "https://i.imgur.com/9Ow6bJC.png",
     "more": "Португалия.",
+    "region": "Europe"
+  },
+  {
+    "title": "США (ФЕСШ)",
+    "lat": 53.725461,
+    "lng": -7.900243,
+    "icon": "https://i.imgur.com/MoDY6eP.png",
+    "more": "Ирландия ч.1",
+    "region": "Europe"
+  },
+  {
+    "title": "Республика Либерленд",
+    "lat": 52.156561,
+    "lng": -8.921972,
+    "icon": "https://i.imgur.com/jqG2AVN.png",
+    "more": "Ирландия ч.2",
     "region": "Europe"
   }
   ]
