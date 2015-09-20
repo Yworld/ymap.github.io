@@ -174,5 +174,13 @@
     "icon": "https://i.imgur.com/jqG2AVN.png",
     "more": "Ирландия ч.2",
     "region": "Europe"
+  },
+  {
+    "title": "Королевство Силенд",
+    "lat": 49.689310,
+    "lng": 15.336944,
+    "icon": "https://i.imgur.com/skYGQiY.png",
+    "more": "Чехия",
+    "region": "Europe"
   }
   ]
