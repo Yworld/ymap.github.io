@@ -14,10 +14,10 @@
     "region": "Northen America"
   },
   {
-    "title": "Республика Либерленд",
+    "title": "Рабская Республика-Колония Либерленда",
     "lat": -23.247206,
     "lng": -58.378478,
-    "icon": "https://i.imgur.com/jqG2AVN.png",
+    "icon": "https://i.imgur.com/tc59U6x.png",
     "region": "South America"
   },
   {
@@ -156,7 +156,7 @@
     "lat": 39.689774,
     "lng": -8.621641,
     "icon": "https://i.imgur.com/9Ow6bJC.png",
-    "more": "Португалия.",
+    "more": "Португалия",
     "region": "Europe"
   },
   {
@@ -190,5 +190,34 @@
     "icon": "https://i.imgur.com/mWta54m.png",
     "more": "Шри-Ланка",
     "region": "Asia"
+  },
+  {
+    "title": "Королевство Швеция",
+    "lat": 62.906566,
+    "lng": 15.503418,
+    "icon": "https://i.imgur.com/SFBM2gG.png",
+    "more": "При США",
+    "region": "Europe"
+  },
+  {
+    "title": "Утенийская Федерация",
+    "lat": 61.894353,
+    "lng": 9.405241,
+    "icon": "https://i.imgur.com/9Ow6bJC.png",
+    "region": "Europe"
+  },
+  {
+    "title": "ООН",
+    "lat": 61.664302,
+    "lng": 25.506853,
+    "icon": "https://i.imgur.com/Lx5ZInu.png",
+    "region": "Europe"
+  },
+  {
+    "title": "Республика Либерленд",
+    "lat": 67.238451,
+    "lng": 26.714326,
+    "icon": "https://i.imgur.com/jqG2AVN.png",
+    "region": "Europe"
   }
   ]
