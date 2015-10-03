@@ -24,8 +24,17 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  map.data.loadGeoJson('//карта.юмир.рф/amap/aut.geo.json');
-  map.data.loadGeoJson('//карта.юмир.рф/amap/usa.geo.json');
+	  
+	// Границы AMAP
+  map.data.loadGeoJson('//карта.юмир.рф/amap/aut.geo.json'); // УФ Австрия
+  map.data.loadGeoJson('//карта.юмир.рф/amap/usa.geo.json'); // США
+  map.data.loadGeoJson('//карта.юмир.рф/amap/swe.geo.json'); // Швеция
+  map.data.loadGeoJson('//карта.юмир.рф/amap/nor.geo.json'); // УФ Норвегия (без острова)
+  map.data.loadGeoJson('//карта.юмир.рф/amap/fin.geo.json'); // Либерленд Финляндия
+  map.data.loadGeoJson('//карта.юмир.рф/amap/irl.geo.json'); // ФЕСШ Ирландия
+  map.data.loadGeoJson('//карта.юмир.рф/amap/esp.geo.json'); // ФЕСШ Испания
+  map.data.loadGeoJson('//карта.юмир.рф/amap/can.geo.json'); // США Канада
+  // Границы non-AMAP
   
   var featureStyle = {
     strokeWeight: 0.7
