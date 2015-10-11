@@ -43,11 +43,13 @@ function initialize() {
   map.data.loadGeoJson('//карта.юмир.рф/amap/UKR.geo.json'); // ФЕСШ Украина
   map.data.loadGeoJson('//карта.юмир.рф/amap/LVA.geo.json'); // ФЕСШ Латвия
   map.data.loadGeoJson('//карта.юмир.рф/amap/LUX.geo.json'); // ФЕСШ Люксембург
+  map.data.loadGeoJson('//карта.юмир.рф/amap/jpn.geo.json'); // ФЕСШ Япония
   // Границы non-AMAP
   
   var featureStyle = {
     strokeWeight: 0.7,
-	preserveViewport: true
+	preserveViewport: true,
+	fillColor: none
   }
                      map.data.setStyle(featureStyle);
                      
