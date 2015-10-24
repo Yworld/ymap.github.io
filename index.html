@@ -22,6 +22,11 @@ map.addLayer(ggl);
 // geojson
 
 var boundaries = new L.geoJson();
+boundaries.setStyle({
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 0,
+			});
 boundaries.addTo(map);
 
 $.ajax({
