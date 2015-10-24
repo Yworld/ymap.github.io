@@ -7,115 +7,50 @@
 	<meta property="og:title" content="Карта ЮМира">
 	<meta property="og:description" content="Карта ЮМира. Только актуальные границы! Обновляется КАООН.">
 	<meta property="og:image" content="https://i.imgur.com/N86I981.png">
-	<script src="/js/head.load.min.js"></script>
+	<script src="js/head.load.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
     <script>
-    head.load("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js", function() {
-        head.load("https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initialize", "/js/module/switcher.js");
-        window.smallterritoriesloaded = false; window.poistatus = false;
+    head.load("https://yastatic.net/jquery/2.1.4/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js", "js/leaflet.ajax.min.js", "js/googlemaps.js", function() {
+var map = new L.Map('map', {center: new L.LatLng(53.9618, 58.4277), zoom: 1});
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: [{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"on"},{"gamma":3.17}]}]
+	}
 });
-/* мапа */
-function initialize() {
-  var mapOptions = {
-    zoom: 4,
-    center: new google.maps.LatLng(54.9382099, 43.3239641),
-    styles: [{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"on"},{"gamma":3.17}]}]
-  };
-  
+map.addLayer(ggl);
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-  map.data.loadGeoJson('//карта.юмир.рф/borders.json');
-  
-  var featureStyle = {
-    strokeWeight: 0.7
-  }
-                     map.data.setStyle(featureStyle);
-                     
-                 
-// Load countries
-        $.getJSON("/data/countries.json", function(json1) {
-          for (var i = 0, length = json1.length; i < length; i++) {
-  var data = json1[i],
-      latLng = new google.maps.LatLng(data.lat, data.lng); 
+// geojson
 
-  // Creating a marker and putting it on the map
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map: map,
-    title: data.title,
-    icon: data.icon,
-    opacity: 0.5
-  });
-}
-      });
-    console.log('[FINE] Countries loaded from /data/countries.json!');
-    
-// Load smallterritories
-google.maps.event.addListener(map, 'zoom_changed', function() {
-var zoomLevel =  map.getZoom();
-console.log('Wow! '+zoomLevel)
-if (zoomLevel>=7) {
-    if(window.smallterritoriesloaded == true) {
-        // Уже было загружено
-    }
-    else {
-     $.getJSON("/data/smallterritories.json", function(json2) {
-          for (var i = 0, length = json2.length; i < length; i++) {
-  var data = json2[i],
-      latLng = new google.maps.LatLng(data.lat, data.lng); 
+var boundaries = new L.geoJson();
+boundaries.addTo(map);
 
-  // Creating a marker and putting it on the map
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map: map,
-    title: data.title,
-    icon: data.icon,
-    opacity: 0.5
-  });
+$.ajax({
+dataType: "json",
+url: "compiled.json",
+success: function(data) {
+    $(data.features).each(function(key, data) {
+        boundaries.addData(data);
+    });
 }
- console.log('[FINE] Small territories loaded from /data/smallterritories.json!');
- window.smallterritoriesloaded = true;
-});
-}
-}
-
-if (zoomLevel>=14) {
-    if(window.poistatus == true) {
-        // Уже было загружено
-    }
-    else {
-     $.getJSON("/data/poi.json", function(json3) {
-          for (var i = 0, length = json3.length; i < length; i++) {
-  var data = json3[i],
-      latLng = new google.maps.LatLng(data.lat, data.lng); 
-  // Creating a marker and putting it on the map
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map: map,
-    title: data.title
-  });
-}
- console.log('[FINE] POI loaded from /data/poi.json!');
- window.poistatus = true;
-});
-}
-}
+}).error(function() {});
 
 });
-    
-}
     </script>
     <style>
-            html, body, #map-canvas {
+            html, body, #map {
         height: 100%;
         margin: 0px;
         padding: 0px;
         font-family: Arial, sans-serif;
       }
+	  	.leaflet-clickable {
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+	}
     </style>
   </head>
   <body>
-    <div id="map-canvas"></div>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div id="map">
+</div>
      </body>
 </html>
