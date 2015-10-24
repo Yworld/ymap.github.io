@@ -20,13 +20,14 @@ var ggl = new L.Google('ROADMAP', {
 map.addLayer(ggl);
 
 // geojson
-
-var boundaries = new L.geoJson();
-boundaries.setStyle({
-				weight: 1,
-				opacity: 1,
-				fillOpacity: 0,
-			});
+var nullGeoJSON = [];
+var myStyle = {
+    "weight": 1,
+    "fillOpacity": 0
+};
+var boundaries = new L.geoJson(nullGeoJSON, {
+    style: myStyle
+});
 boundaries.addTo(map);
 
 $.ajax({
