@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Карта ЮМира</title>
+    <title>Карта ЮМира > Beta</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	<meta property="og:title" content="Карта ЮМира">
@@ -19,11 +19,14 @@ var ggl = new L.Google('ROADMAP', {
 });
 map.addLayer(ggl);
 
-// geojson
+// GeoJSON compiled
 var nullGeoJSON = [];
 var myStyle = {
-    "weight": 1,
-    "fillOpacity": 0
+    "weight": 1.1,
+    "fillOpacity": 0,
+    "opacity": 1,
+    "color": "black",
+    "clickable": false
 };
 var boundaries = new L.geoJson(nullGeoJSON, {
     style: myStyle
@@ -32,7 +35,7 @@ boundaries.addTo(map);
 
 $.ajax({
 dataType: "json",
-url: "compiled.json",
+url: "http://карта.юмир.рф/compiled.json",
 success: function(data) {
     $(data.features).each(function(key, data) {
         boundaries.addData(data);
@@ -40,19 +43,34 @@ success: function(data) {
 }
 }).error(function() {});
 
+// Markers
+/* Library of flags */
+var USflag = L.icon({iconUrl: 'https://i.imgur.com/MoDY6eP.png'});
+var UKRflag = L.icon({iconUrl: 'https://i.imgur.com/BoTGRNC.png'});
+var SEflag = L.icon({iconUrl: 'https://i.imgur.com/SFBM2gG.png'});
+var CAflag = L.icon({iconUrl: 'http://i.imgur.com/nw3ZVEH.png'});
+var LEflag = L.icon({iconUrl: 'https://i.imgur.com/jqG2AVN.png'});
+var UFflag = L.icon({iconUrl: 'https://i.imgur.com/9Ow6bJC.png'});
+var RUflag = L.icon({iconUrl: 'http://i.imgur.com/f0nviTQ.png'});
+
+$.getJSON("countries-markers.json", function(json1) {
+    for (var i = 0, length = json1.length; i < length; i++) {
+        var data = json1[i],
+            latLng = new google.maps.LatLng(data.lat, data.lng);
+        // Creating a marker and putting it on the map
+		L.marker([data.lat, data.lng], {icon: data.icon}).addTo(map).bindPopup(data.country);
+    }
+});
+
 });
     </script>
     <style>
-            html, body, #map {
+        html, body, #map {
         height: 100%;
         margin: 0px;
         padding: 0px;
         font-family: Arial, sans-serif;
       }
-	  	.leaflet-clickable {
-		cursor: -webkit-grab;
-		cursor: -moz-grab;
-	}
     </style>
   </head>
   <body>
