@@ -1,2 +1,2 @@
-# ymap.github.io
-Yuworld map
+# Old map
+Based on Google Maps API v3
