@@ -48,26 +48,33 @@ success: function(data) {
 var USflag = L.icon({iconUrl: 'https://i.imgur.com/MoDY6eP.png'});
 var UKRflag = L.icon({iconUrl: 'https://i.imgur.com/BoTGRNC.png'});
 var SEflag = L.icon({iconUrl: 'https://i.imgur.com/SFBM2gG.png'});
-var CAflag = L.icon({iconUrl: 'http://i.imgur.com/nw3ZVEH.png'});
+var CAflag = L.icon({iconUrl: 'https://i.imgur.com/nw3ZVEH.png'});
 var LEflag = L.icon({iconUrl: 'https://i.imgur.com/jqG2AVN.png'});
 var UFflag = L.icon({iconUrl: 'https://i.imgur.com/9Ow6bJC.png'});
-var RUflag = L.icon({iconUrl: 'http://i.imgur.com/f0nviTQ.png'});
+var RUflag = L.icon({iconUrl: 'https://i.imgur.com/f0nviTQ.png'});
+var CHflag = L.icon({iconUrl: 'https://i.imgur.com/wSZWcOo.png'});
+var SFflag = L.icon({iconUrl: 'https://i.imgur.com/lju9f4R.png'});
+var CFRflag = L.icon({iconUrl: 'https://i.imgur.com/oSYklHG.png'});
 
 L.marker([52.088086, -111.932295], {icon: USflag, opacity: 0.5}).addTo(map).bindPopup('Соединённые Штаты Америки'); // США (Северная Америка)
-L.marker([62.886351, 12.726884], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция'); // Швеция
-L.marker([62.982941, 22.499734], {icon: RUflag, opacity: 0.5}).addTo(map).bindPopup('Российская Федерация'); // Финляндия
-L.marker([48.925550, -0.994625], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика'); // Франция (часть)
+L.marker([62.886351, 12.726884], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция<br><strong>Ассоциировано с США</strong>'); // Швеция
+L.marker([62.982941, 22.499734], {icon: SFflag, opacity: 0.5}).addTo(map).bindPopup('Южная Финляндия'); // Финляндия (часть Гомера)
+L.marker([48.925550, -0.994625], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Франция (часть)
 L.marker([45.657338, 4.429842], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Франция (часть)
 L.marker([48.462923, 13.967212], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Австрия
-L.marker([52.297315, 5.030881], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд'); // Нидерланды
-L.marker([51.672963, 18.898904], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция'); // Польша (часть)
-L.marker([53.927468, 18.191157], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд'); // Польша (часть)
-L.marker([49.545832, 29.913472], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика'); // Украина
+L.marker([52.297315, 5.030881], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд<br><strong>Ассоциировано с США</strong>'); // Нидерланды
+L.marker([51.672963, 18.898904], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция<br><strong>Ассоциировано с США</strong>'); // Польша (часть)
+L.marker([53.927468, 18.191157], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд<br><strong>Ассоциировано с США</strong>'); // Польша (часть)
+L.marker([49.545832, 29.913472], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Украина
 L.marker([47.595983, 27.825608], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Молдавия
 L.marker([-24.137767, 132.796687], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Австралия
 L.marker([57.652540, 30.730432], {icon: RUflag, opacity: 0.5}).addTo(map).bindPopup('Российская Федерация'); // Россия (часть РФ)
-L.marker([23.273800, 40.028067], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Саудовская Аравия (часть УФ)
-L.marker([25.059547, 47.368305], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд'); // Саудовская Аравия (часть ЛЕ)
+L.marker([23.273800, 40.028067], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Саудовская Аравия (часть УФР)
+L.marker([25.059547, 47.368305], {icon: RUflag, opacity: 0.5}).addTo(map).bindPopup('Российская Федерация'); // Саудовская Аравия (часть РФ)
+L.marker([47.079239, 7.802702], {icon: CHflag, opacity: 0.5}).addTo(map).bindPopup('Швейцария<br><strong>Ассоциировано с США</strong>'); // Швейцария
+L.marker([42.364831, 8.604211], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд<br><strong>Ассоциировано с США</strong>'); // Польша (часть)
+L.marker([45.726463, 16.217960], {icon: LEflag, opacity: 0.5}).addTo(map).bindPopup('Республика Либерленд<br><strong>Ассоциировано с США</strong>'); // Польша (часть)
+L.marker([67.535346, 25.255513], {icon: CFRflag, opacity: 0.5}).addTo(map).bindPopup('Финская Коммунистическая Республика'); // Финляндия (часть ШБ)
 
 });
     </script>
