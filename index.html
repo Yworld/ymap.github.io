@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Карта ЮМира > Beta 2.0</title>
+    <title>Карта ЮМира > Beta 3.0</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	<meta property="og:title" content="Карта ЮМира">
@@ -51,19 +51,24 @@ var SEflag = L.icon({iconUrl: 'https://i.imgur.com/SFBM2gG.png'});
 var CAflag = L.icon({iconUrl: 'https://i.imgur.com/nw3ZVEH.png'});
 var UFflag = L.icon({iconUrl: 'https://i.imgur.com/9Ow6bJC.png'});
 var CHflag = L.icon({iconUrl: 'https://i.imgur.com/wSZWcOo.png'});
+var UKflag = L.icon({iconUrl: 'https://i.imgur.com/FzQ9D1t.png'});
+var SUflag = L.icon({iconUrl: 'https://i.imgur.com/3lSyZCQ.png'});
 
 L.marker([52.088086, -111.932295], {icon: USflag, opacity: 0.5}).addTo(map).bindPopup('Соединённые Штаты Америки'); // США (Северная Америка)
-L.marker([62.886351, 12.726884], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция<br><strong>Ассоциировано с США</strong>'); // Швеция
-L.marker([48.925550, -0.994625], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Франция (часть)
+L.marker([62.886351, 12.726884], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция'); // Швеция
+L.marker([48.925550, -0.994625], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика'); // Франция (часть)
 L.marker([45.657338, 4.429842], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Франция (часть)
 L.marker([48.462923, 13.967212], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Австрия
-L.marker([52.297315, 5.030881], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция<br><strong>Ассоциировано с США</strong>'); // Нидерланды
-L.marker([51.672963, 18.898904], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция<br><strong>Ассоциировано с США</strong>'); // Польша (часть)
-L.marker([49.545832, 29.913472], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Украина
+L.marker([52.297315, 5.030881], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция'); // Нидерланды
+L.marker([51.672963, 18.898904], {icon: SEflag, opacity: 0.5}).addTo(map).bindPopup('Королевство Швеция'); // Польша (часть)
+L.marker([49.545832, 29.913472], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика'); // Украина
 L.marker([47.595983, 27.825608], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Молдавия
 L.marker([-24.137767, 132.796687], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // Австралия
-L.marker([47.079239, 7.802702], {icon: CHflag, opacity: 0.5}).addTo(map).bindPopup('Швейцария<br><strong>Ассоциировано с США</strong>'); // Швейцария
-L.marker([42.364831, 8.604211], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика<br><strong>Ассоциировано с США</strong>'); // Корсика
+L.marker([47.079239, 7.802702], {icon: CHflag, opacity: 0.5}).addTo(map).bindPopup('Швейцария'); // Швейцария
+L.marker([42.364831, 8.604211], {icon: UKRflag, opacity: 0.5}).addTo(map).bindPopup('Украинская Федеративная Республика'); // Корсика
+L.marker([54.535809, -3.204708], {icon: UKflag, opacity: 0.5}).addTo(map).bindPopup('Великобритания'); // UK
+L.marker([53.434088, -9.997304], {icon: UFflag, opacity: 0.5}).addTo(map).bindPopup('Утенийская Федерация'); // N. Ire
+L.marker([35.360155, 32.241716], {icon: SUflag, opacity: 0.5}).addTo(map).bindPopup('Республика Сурими'); // Cyprus
 
 });
     </script>
