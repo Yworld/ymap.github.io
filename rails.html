@@ -10,7 +10,7 @@
 	<script src="js/head.load.min.js"></script>
 	<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
     <script>function isBlank(str) {return (!str || /^\s*$/.test(str));}
-    head.load("https://yastatic.net/jquery/2.1.4/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js", "js/googlemaps.js", "js/leaflet-search.min.js", "css/leaflet-search.min.css", "https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js", function() {
+    head.load("https://yastatic.net/jquery/2.1.4/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js", "js/googlemaps.js", "js/leaflet-search.min.js", "css/leaflet-search.min.css", "js/KML.js", function() {
 var map = new L.Map('map', {center: new L.LatLng(39.815422, -40.614981), zoom: 3});
 var ggl = new L.Google('ROADMAP', {
 	attribution: 'ООН',
@@ -85,8 +85,14 @@ success: function(data) {
 }
 }).error(function() {});
 
-omnivore.kml('/data/Eurostar.kml').addTo(map);
-omnivore.kml('/data/ULR.kml').addTo(map);
+//Eurostar
+var EurostarCorporation = new L.KML("/data/Eurostar.kml", {async: true});
+EurostarCorporation.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+map.addLayer(EurostarCorporation);
+//ULR
+var ULR = new L.KML("/data/ULR.kml", {async: true});
+ULR.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+map.addLayer(ULR);
 
 for(i in countries) {
 		var countryName = countries[i].name;
