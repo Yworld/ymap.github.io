@@ -24,35 +24,31 @@ map.addLayer(ggl);
 /* Library of flags */
 USflag = L.icon({iconUrl: 'https://i.imgur.com/MoDY6eP.png'});
 UKRflag = L.icon({iconUrl: 'https://i.imgur.com/BoTGRNC.png'});
-SEflag = L.icon({iconUrl: 'https://i.imgur.com/SFBM2gG.png'});
 UFflag = L.icon({iconUrl: 'https://i.imgur.com/9Ow6bJC.png'});
 PRUflag = L.icon({iconUrl: 'https://i.imgur.com/PoKOp1p.png'});
-CHflag = L.icon({iconUrl: 'https://i.imgur.com/wSZWcOo.png'});
-FRflag = L.icon({iconUrl: 'https://i.imgur.com/mXHmsx1.png'});
-NLflag = L.icon({iconUrl: 'https://i.imgur.com/K7yGUAM.png'});
-UKflag = L.icon({iconUrl: 'https://i.imgur.com/FzQ9D1t.png'});
-PLflag = L.icon({iconUrl: 'https://i.imgur.com/xFZXDkZ.png'});
-KARflag = L.icon({iconUrl: 'https://i.imgur.com/KjuZtBy.png'});
+ECflag = L.icon({iconUrl: 'https://i.imgur.com/AgjY8Gm.png'});
 
 
 //crhere
 var countries = [
 		{"flag_loc":[52.088086, -111.932295], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // США (Северная Америка)
-		{"flag_loc":[62.886351, 12.726884], "flag_icon": SEflag, "name":"Королевство Швеция", "union": "#Association"}, // Швеция
-		{"flag_loc":[48.925550, -0.994625], "flag_icon": FRflag, "name":"Автономная Территория Швеции Франция", "union": ""}, // Франция (часть АТШ Франция)
+		{"flag_loc":[63.258274, 13.178204], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Швеция
+		{"flag_loc":[52.213590, 8.526374], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Германия
+		{"flag_loc":[56.132939, 8.428532], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Дания
+		{"flag_loc":[48.925550, -0.994625], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Франция (часть АТШ Франция)
 		{"flag_loc":[45.657338, 4.429842], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": "Утенийский Союз"}, // Франция (часть УФ)
 		{"flag_loc":[48.462923, 13.967212], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": ""}, // Австрия
-		{"flag_loc":[52.297315, 5.030881], "flag_icon": NLflag, "name":"Автономная Территория Швеции Нидерланды", "union": ""}, // Нидерланды
-		{"flag_loc":[51.672963, 18.898904], "flag_icon": PLflag, "name":"Автономная Территория Швеции Польша", "union": ""}, // Польша
-		{"flag_loc":[49.545832, 29.913472], "flag_icon": UKRflag, "name":"Украинская Федерация", "union": "#Association"}, // Украина
+		{"flag_loc":[52.540564, 4.409770], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Нидерланды
+		{"flag_loc":[53.104995, 17.921029], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Польша
+		{"flag_loc":[50.552973, 29.940071], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Украина
 		{"flag_loc":[47.595983, 27.825608], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // Молдавия
 		{"flag_loc":[-24.137767, 132.796687], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // Австралия
-		{"flag_loc":[47.079239, 7.802702], "flag_icon": CHflag, "name":"Автономная Территория Швеции Швейцария", "union": ""}, // Швейцария
-		{"flag_loc":[42.364831, 8.604211], "flag_icon": KARflag, "name":"Королевство Арстотцка", "union": ""}, // Арстотцка
-		{"flag_loc":[54.535809, -3.204708], "flag_icon": UKflag, "name":"Соединенное Королевство Великобритании и Северной Ирландии", "union": "#Association"}, // Великобритания
+		{"flag_loc":[47.079239, 7.802702], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Швейцария
+		{"flag_loc":[42.364831, 8.604211], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Арстотцка
+		{"flag_loc":[54.535809, -3.204708], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Великобритания
 		{"flag_loc":[53.434088, -9.997304], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // С. Ирл.
-		{"flag_loc":[35.360155, 32.241716], "flag_icon": KARflag, "name":"Королевство Арстотцка", "union": ""}, // Кипр
-		{"flag_loc":[49.945192, 14.525689], "flag_icon": KARflag, "name":"Королевство Арстотцка", "union": ""}, // Чехия
+		{"flag_loc":[35.360155, 32.241716], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Кипр
+		{"flag_loc":[50.318249, 14.693030], "flag_icon": ECflag, "name":"Европейская Конфедерация", "union": ""}, // Чехия
 		{"flag_loc":[26.000311, -105.859393], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // Мексика
 	];
 
