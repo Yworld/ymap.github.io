@@ -13,7 +13,7 @@
     head.load("https://yastatic.net/jquery/2.1.4/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css", "http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js", "js/googlemaps.js", "js/leaflet-search.min.js", "css/leaflet-search.min.css", function() {
 var map = new L.Map('map', {center: new L.LatLng(39.815422, -40.614981), zoom: 3});
 var ggl = new L.Google('ROADMAP', {
-	attribution: 'ООН',
+	attribution: 'COS',
 	mapOptions: {
 		styles: [{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.rail","elementType":"all","stylers":[{"visibility":"on"},{"gamma":3.17}]}]
 	}
@@ -30,14 +30,13 @@ PRUflag = L.icon({iconUrl: 'https://i.imgur.com/PoKOp1p.png'});
 
 //crhere
 var countries = [
-		{"flag_loc":[52.088086, -111.932295], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // США (Северная Америка)
 		{"flag_loc":[20.778816, -157.931706], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // США (Гавайи)
 		{"flag_loc":[63.258274, 13.178204], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Швеция
 		{"flag_loc":[52.213590, 8.526374], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Германия
 		{"flag_loc":[56.132939, 8.428532], "flag_icon": RAflag, "name":"Республика Арстотцка", "union": ""}, // Дания
 		{"flag_loc":[48.925550, -0.994625], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Франция (часть АТШ Франция)
 		{"flag_loc":[45.657338, 4.429842], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": "Утенийский Союз"}, // Франция (часть УФ)
-		{"flag_loc":[48.462923, 13.967212], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": ""}, // Австрия
+		{"flag_loc":[48.462923, 13.967212], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": "Утенийский Союз"}, // Австрия
 		{"flag_loc":[52.540564, 4.409770], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Нидерланды
 		{"flag_loc":[53.104995, 17.921029], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Польша
 		{"flag_loc":[50.552973, 29.940071], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Украина
@@ -46,10 +45,12 @@ var countries = [
 		{"flag_loc":[47.079239, 7.802702], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Швейцария
 		{"flag_loc":[42.364831, 8.604211], "flag_icon": RAflag, "name":"Республика Арстотцка", "union": ""}, // Арстотцка
 		{"flag_loc":[54.535809, -3.204708], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // Великобритания
-		{"flag_loc":[53.434088, -9.997304], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // С. Ирл.
+		{"flag_loc":[53.434088, -9.997304], "flag_icon": UFflag, "name":"Утенийская Федерация", "union": "Утенийский Союз"}, // Ирл.
 		{"flag_loc":[35.360155, 32.241716], "flag_icon": RAflag, "name":"Республика Арстотцка", "union": ""}, // Кипр
 		{"flag_loc":[50.318249, 14.693030], "flag_icon": RAflag, "name":"Республика Арстотцка", "union": ""}, // Чехия
 		{"flag_loc":[26.000311, -105.859393], "flag_icon": PRUflag, "name":"Периферическая Республика Утения", "union": "Утенийский Союз"}, // Мексика
+		{"flag_loc":[52.088086, -111.932295], "flag_icon": USflag, "name":"Соединённые Штаты Америки", "union": ""}, // США (Северная Америка)
+		{"flag_loc":[43.147880, 12.057892], "flag_icon": RAflag, "name":"Республика Арстотцка", "union": ""}, // Италия
 	];
 
 var markersLayer = new L.LayerGroup();
