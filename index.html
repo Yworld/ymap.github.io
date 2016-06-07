@@ -36,8 +36,8 @@ var countries = [
 		{"flag_loc":[54.071975, 25.215015], "flag_icon": LLflag, "name":"Либерленд"}, // Беларусь
 		{"flag_loc":[42.365937, 8.572411], "flag_icon": LLflag, "name":"Либерленд"}, // Корсика
 		{"flag_loc":[56.037108, 8.289307], "flag_icon": LLflag, "name":"Либерленд"}, // Дания #SEARCH
-		{"flag_loc":[-29.875361, 21.259279], "flag_icon": OPflag, "name":"Королевство Опулентум"}, // ЮАР
-		{"flag_loc":[48.221057, 16.330613], "flag_icon": OPflag, "name":"Королевство Опулентум"}, // Вена (ОПЛ) #SEARCH
+		{"flag_loc":[-29.875361, 21.259279], "flag_icon": OPflag, "name":"Опулентум"}, // ЮАР
+		{"flag_loc":[48.221057, 16.330613], "flag_icon": OPflag, "name":"Опулентум"}, // Вена (ОПЛ) #SEARCH
 		{"flag_loc":[52.088086, -111.932295], "flag_icon": USflag, "name":"Соединённые Штаты Америки"}, // США (Северная Америка) #SEARCH
 		{"flag_loc":[54.535809, -3.204708], "flag_icon": UEflag, "name":"Сообщество Европейских Штатов"}, // Великобритания #SEARCH
 	];
@@ -82,7 +82,7 @@ for(i in countries) {
 			} else if(countries[i].name == 'Либерленд') {
 				union = 'Европейский союз';
 				capital = 'Копенгаген';
-			} else if(countries[i].name == 'Королевство Опулентум') {
+			} else if(countries[i].name == 'Опулентум') {
 				union = 'Не состоит в союзах';
 				capital = 'Вена';
 			}
