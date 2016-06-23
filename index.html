@@ -22,9 +22,9 @@ map.addLayer(ggl);
 
 // Markers
 /* Library of flags */
-UKflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/uk.svg', iconSize: [40,22]});
+UKflag = L.icon({iconUrl: 'http://maps.umir.pw/svgflags/uk.svg', iconSize: [40,22]});
 OPflag = L.icon({iconUrl: 'https://i.imgur.com/SuJr9C7.png'});
-LLflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/liberland.svg', iconSize: [40,22]});
+LLflag = L.icon({iconUrl: 'http://maps.umir.pw/svgflags/liberland.svg', iconSize: [40,22]});
 
 
 //crhere
@@ -55,7 +55,7 @@ boundaries.addTo(map);
 
 $.ajax({
 dataType: "json",
-url: "http://yworld.github.io/ymap.github.io/compiled.json",
+url: "http://maps.umir.pw/compiled.json",
 success: function(data) {
     $(data.features).each(function(key, data) {
         boundaries.addData(data);
