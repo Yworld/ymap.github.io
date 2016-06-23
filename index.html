@@ -63,7 +63,7 @@ boundaries.addTo(map);
 
 $.ajax({
 dataType: "json",
-url: "http://карта.юмир.рф/compiled.json",
+url: "https://yworld.github.io/ymap.github.io/compiled.json",
 success: function(data) {
     $(data.features).each(function(key, data) {
         boundaries.addData(data);
