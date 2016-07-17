@@ -61,7 +61,7 @@ boundaries.addTo(map);
 
 $.ajax({
 dataType: "json",
-url: "http://yworld.github.io/ymap.github.io/compiled.json",
+url: "http://maps.umir.pw/compiled.json",
 success: function(data) {
     $(data.features).each(function(key, data) {
         boundaries.addData(data);
