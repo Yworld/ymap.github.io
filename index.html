@@ -23,15 +23,21 @@ map.addLayer(ggl);
 // Markers
 /* Library of flags */
 UKflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/uk.svg', iconSize: [40,22]});
+UFflag = L.icon({iconUrl: 'https://i.imgur.com/gIBg8Gj.png'});
 OPflag = L.icon({iconUrl: 'https://i.imgur.com/SuJr9C7.png'});
-LLflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/liberland.svg', iconSize: [40,22]});
+AXflag = L.icon({iconUrl: 'https://i.imgur.com/yHfqnEg.png'});
+CYflag = L.icon({iconUrl: 'https://i.imgur.com/aEJmIPv.png'});
 
 
 //crhere
 var countries = [
-		{"flag_loc":[56.270709, 8.898745], "flag_icon": LLflag, "name":"Либерленд"}, // Дания #SEARCH
-		{"flag_loc":[48.221057, 16.330613], "flag_icon": OPflag, "name":"Опулентум"}, // Вена (ОПЛ) #SEARCH
-		{"flag_loc":[53.882112, -4.641093], "flag_icon": UKflag, "name":"Великобритания"}, // Великобритания #SEARCH
+		{"flag_loc":[56.270709, 8.898745], "flag_icon": AXflag, "name":"Королевство Арварох"}, // Дания #SEARCH
+		{"flag_loc":[48.221057, 16.330613], "flag_icon": UFflag, "name":"Утенийская Федерация"}, // Вена (Утения) #SEARCH
+		{"flag_loc":[55.420708, 8.387141], "flag_icon": UKflag, "name":"Великобритания"}, // Великобритания #SEARCH
+		{"flag_loc":[53.882112, -4.641093], "flag_icon": UKflag, "name":"Великобритания"}, // Фонё
+		{"flag_loc":[55.144758, 8.493166], "flag_icon": UKflag, "name":"Великобритания"}, // Рёмё
+		{"flag_loc":[35.153684, 32.897470], "flag_icon": CYflag, "name":"Коммунистическая Республика Кипра"}, // Кипр #SEARCH
+		{"flag_loc":[47.013325, 1.313814], "flag_icon": OPflag, "name":"Опулентум"}, // Франция #SEARCH
 	];
 
 var markersLayer = new L.LayerGroup();
@@ -69,14 +75,14 @@ for(i in countries) {
 				union = 'Европейский союз';
 				capital = 'Лондон';
 				officalname = 'Соединённое Королевство Великобритании и Северной Ирландии';
-			} else if(countries[i].name == 'Соединённые Штаты Америки') {
-				union = 'Не состоит в союзах';
-				capital = 'Вашингтон';
-			} else if(countries[i].name == 'Либерленд') {
-				union = 'Европейский союз';
+			} else if(countries[i].name == 'Королевство Арварох') {
+				union = 'Европейский Альянс';
 				capital = 'Копенгаген';
 			} else if(countries[i].name == 'Опулентум') {
-				union = 'Не состоит в союзах';
+				union = 'Европейский Альянс';
+				capital = 'Париж';
+			} else if(countries[i].name == 'Утенийская Федерация') {
+				union = 'Европейский союз';
 				capital = 'Вена';
 			}
 			if(typeof officalname === 'undefined') {
