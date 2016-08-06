@@ -72,26 +72,29 @@ success: function(data) {
 for(i in countries) {
 		var countryName = countries[i].name;
 			if(countries[i].name == 'Великобритания') {
-				countries[i].union = 'Европейский союз';
-				countries[i].capital = 'Лондон';
-				countries[i].officalname = 'Соединённое Королевство Великобритании и Северной Ирландии';
+				union = 'Европейский союз';
+				capital = 'Лондон';
+				officalname = 'Соединённое Королевство Великобритании и Северной Ирландии';
 			} else if(countries[i].name == 'Утенийская Федерация') {
-				countries[i].union = 'Европейский союз';
-				countries[i].capital = 'Вена';
+				union = 'Европейский союз';
+				capital = 'Вена';
+				officalname = undefined;
 			} else if(countries[i].name == 'Италия') {
-				countries[i].union = 'Европейский союз';
-				countries[i].capital = 'Рим';
+				union = 'Европейский союз';
+				capital = 'Рим';
+				officalname = undefined;
 			} else if(countries[i].name == 'Авалонская Республика') {
-				countries[i].union = 'Нет';
-				countries[i].capital = 'Париж';
+				union = 'Нет';
+				capital = 'Париж';
 			} else if(countries[i].name == 'Коммунистическая Республика Кипр') {
-				countries[i].union = 'Нет';
-				countries[i].capital = 'Никосия';
+				union = 'Нет';
+				capital = 'Никосия';
+				officalname = undefined;
 			}
 			if(typeof officalname === 'undefined') {
-				popup = '<b>'+countries[i].name+'</b><br><i class="fa fa-university" aria-hidden="true"></i> '+countries[i].union+'<br><i class="fa fa-location-arrow" aria-hidden="true"></i> '+countries[i].capital;
+				popup = '<b>'+countries[i].name+'</b><br><i class="fa fa-university" aria-hidden="true"></i> '+union+'<br><i class="fa fa-location-arrow" aria-hidden="true"></i> '+capital;
 			} else {
-				popup = '<b>'+countries[i].name+'</b><br><i class="fa fa-font" aria-hidden="true"></i> '+countries[i].officalname+'<br><i class="fa fa-university" aria-hidden="true"></i> '+countries[i].union+'<br><i class="fa fa-location-arrow" aria-hidden="true"></i> '+countries[i].capital;
+				popup = '<b>'+countries[i].name+'</b><br><i class="fa fa-font" aria-hidden="true"></i> '+officalname+'<br><i class="fa fa-university" aria-hidden="true"></i> '+union+'<br><i class="fa fa-location-arrow" aria-hidden="true"></i> '+capital;
 			}
 			
 			var loc = countries[i].flag_loc;
