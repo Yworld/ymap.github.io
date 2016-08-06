@@ -24,16 +24,20 @@ map.addLayer(ggl);
 /* Library of flags */
 UKflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/uk.svg', iconSize: [40,22]});
 ITflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/it.svg', iconSize: [40,22]});
+AVflag = L.icon({iconUrl: 'http://yworld.github.io/ymap.github.io/svgflags/av.svg', iconSize: [40,22]});
 UFflag = L.icon({iconUrl: 'https://i.imgur.com/gIBg8Gj.png'});
+CYflag = L.icon({iconUrl: 'https://i.imgur.com/aEJmIPv.png'});
 
 //crhere
 var countries = [
-		{"flag_loc":[46.164614496897094, 12.6068115234375], "flag_icon": UFflag, "name":"Утенийская Федерация"}, // Часть Италии - УФ
-		{"flag_loc":[47.925520, 13.058245], "flag_icon": UFflag, "name":"Утенийская Федерация"}, // Вена (Утения) #SEARCH
+		{"flag_loc":[46.711635, 10.299785], "flag_icon": UFflag, "name":"Утенийская Федерация"}, // Вена (Утения) #SEARCH
 		{"flag_loc":[53.882112, -4.641093], "flag_icon": UKflag, "name":"Великобритания"}, // Фонё
+		{"flag_loc":[50.896771, 3.889553], "flag_icon": UKflag, "name":"Великобритания"}, // Бельгия
 		{"flag_loc":[55.144758, 8.493166], "flag_icon": UKflag, "name":"Великобритания"}, // Рёмё
 		{"flag_loc":[43.276585, 11.508852], "flag_icon": ITflag, "name":"Италия"}, // Италия
 		{"flag_loc":[55.420708, 8.387141], "flag_icon": UKflag, "name":"Великобритания"}, // Великобритания #SEARCH
+		{"flag_loc":[46.704464, 1.842855], "flag_icon": AVflag, "name":"Авалонская Республика"}, // Авалонская ФРА #SEARCH
+		{"flag_loc":[35.194314, 32.711693], "flag_icon": AVflag, "name":"Коммунистическая Республика Кипр"}, // Кипр #SEARCH
 	];
 
 var markersLayer = new L.LayerGroup();
@@ -77,6 +81,12 @@ for(i in countries) {
 			} else if(countries[i].name == 'Италия') {
 				union = 'Европейский союз';
 				capital = 'Рим';
+			} else if(countries[i].name == 'Авалонская Республика') {
+				union = 'Нет';
+				capital = 'Париж';
+			} else if(countries[i].name == 'Коммунистическая Республика Кипр') {
+				union = 'Нет';
+				capital = 'Никосия';
 			}
 			if(typeof officalname === 'undefined') {
 				popup = '<b>'+countries[i].name+'</b><br><i class="fa fa-university" aria-hidden="true"></i> '+union+'<br><i class="fa fa-location-arrow" aria-hidden="true"></i> '+capital;
